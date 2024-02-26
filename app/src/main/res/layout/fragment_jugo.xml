@@ -1,0 +1,2495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewEx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/side_nav_green"
+    android:keepScreenOn="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/side_nav_green">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:autoLink="web"
+            android:gravity="center_horizontal"
+            android:text="Purificación y Evaporación"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerIP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="38dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="   Status Molienda"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageParo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    android:visibility="visible"
+                    app:srcCompat="@android:drawable/presence_busy" />
+
+                <ImageView
+                    android:id="@+id/imageMoliendo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    android:visibility="gone"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <Space
+                    android:layout_width="29dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Tivap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="Tanques de Jugo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <TableLayout
+
+            android:id="@+id/tableLayout1"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Tivap">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Flujo Jugo Mezc."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/FLUJME"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" M3/H"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Flujo Jugo TQ Pul"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/FLUJPU"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" M3/H"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Flujo Jugo Alc"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/FLUJAL"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U2"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" M3/H"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Flujo Jugo Claro"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/FLUCLA"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" M3/H"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Flujo Meladura"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/FLUMEL"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" M3/H"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel TQ J.M."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVJME"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U3"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel TQ. Pulmón"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVJPU"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U5"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel TQ J.Alc."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVJAL"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel TQ J.Claro"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVCLA"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel TQ Melad."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVMEL"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Pres. Esc. Fab"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREESF"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" pH J. Pulmon"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PHJUGP"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" pH"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" pH J. Alca."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PHJUGA"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" pH"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Mela."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXME"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºB"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/TitGen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="Calentadores de Jugo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout1" />
+
+        <TableLayout
+            android:id="@+id/tableLayout3"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TitGen">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Salida Calent. 1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TSALC1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U1"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Salida Calent. 2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TSALC2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Salida Calent. 3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TSALC3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp. Jugo Alc."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TJUGAL"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/Titeva1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="Vapor Evaporadores"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout3" />
+
+        <TableLayout
+            android:id="@+id/tableLayout4"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titeva1">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.6"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.7"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Presión EVA.8"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/PREEV8"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Bar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA6"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA7"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Vap. EVA8"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEVEV8"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/Titjeva"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="Jugo Evaporadores"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout4" />
+
+        <TableLayout
+            android:id="@+id/tableLayout5"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titjeva">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.6"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.7"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel EVA.8"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVEV8"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA6"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA7"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Jugo EVA8"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEJEV8"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+
+        </TableLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

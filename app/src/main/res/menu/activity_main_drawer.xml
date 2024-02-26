@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_action_home"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_molienda"
+            android:icon="@drawable/ic_action_circles"
+            android:title="Molienda" />
+        <item
+            android:id="@+id/nav_jugo"
+            android:icon="@drawable/ic_action_lab"
+            android:title="Purificación y Evaporación" />
+        <item
+            android:id="@+id/nav_cristalizacion"
+            android:icon="@drawable/ic_action_box"
+            android:title="Cristalización y Empaque" />
+        <item
+            android:id="@+id/nav_generacion"
+            android:icon="@drawable/ic_action_bulb"
+            android:title="Generación Vapor y Energía" />
+        <item
+            android:id="@+id/nav_produccion"
+            android:icon="@drawable/ic_action_barcode_1"
+            android:title="Producción" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_salir"
+                android:icon="@drawable/ic_action_exit"
+                android:title="Salir" />
+        </menu>
+    </item>
+
+</menu>

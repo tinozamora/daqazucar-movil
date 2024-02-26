@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewEx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdeclaro">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/verdeclaro">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:autoLink="web"
+            android:gravity="center_horizontal"
+            android:text="Producción"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerIP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="38dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="   Status Molienda"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageParo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    android:visibility="visible"
+                    app:srcCompat="@android:drawable/presence_busy" />
+
+                <ImageView
+                    android:id="@+id/imageMoliendo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    android:visibility="gone"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <Space
+                    android:layout_width="29dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Tivap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text=" Producción de Azúcar"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+        <TableLayout
+
+            android:id="@+id/tableLayout1"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Tivap">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="140dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Día Zafra"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/DIAZAF"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Azucar Cruda día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/AZCRUD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Azucar Cruda Zafra"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/AZCRUZ"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U2"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Azúcar Bca. día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/AZBLAD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U3"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sacos"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Azúcar Bca. ZafrA"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/AZBLAZ"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U5"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sacos"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Total Azucar día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TOTAZD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="97dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Total Azucar Zafra"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TOTAZZ"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/TitGen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text=" Parámetros de Producción"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout1" />
+
+        <TableLayout
+            android:id="@+id/tableLayout3"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TitGen">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Caña Acu. día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/CAMOLD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U1"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Caña Acu. Zafra"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/CAMOLZ"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:keepScreenOn="true"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Molida Prom. día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/MOLPRD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM/H"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Relación Az. día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/RELAZD"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Kg/TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Relación Az. Zafra"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/RELAZZ"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Kg/TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Azucar en Proc."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/AZUPRO"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TM"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Efic. Vapor"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/EFIVAP"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" KV/ TC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

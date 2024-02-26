@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewEx"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdeclaro">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/verdeclaro">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:autoLink="web"
+            android:gravity="center_horizontal"
+            android:text="Cristalización y Empaque"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerIP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="38dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:text="   Status Molienda"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageParo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    android:visibility="visible"
+                    app:srcCompat="@android:drawable/presence_busy" />
+
+                <ImageView
+                    android:id="@+id/imageMoliendo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="47dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:foregroundGravity="right"
+                    android:visibility="gone"
+                    app:srcCompat="@android:drawable/presence_online" />
+
+                <Space
+                    android:layout_width="29dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Tivap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text=" Empacación"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+        <TableLayout
+
+            android:id="@+id/tableLayout1"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Tivap">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="140dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Día Zafra"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/DIAZAF"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sacos Acu. Día"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/SACDIA"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/U1"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sac"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sacos Acu. Zafra"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/SACZAF"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:keepScreenOn="true"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sac"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sacos Predet."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/SACPRE"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sac"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sacos Van"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/SACVAN"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Sac"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp Azucar Bca."
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEMPAZ"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Dosif. Vitam.A"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VITAKG"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Kg"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Melaza TQ.1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/MELTQ1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TON"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Melaza TQ.2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/MELTQ2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" TON"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Temp.Prod.Melaza"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/TEMMEL"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" ºC"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/TitGen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text=" Tachos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout1" />
+
+        <TableLayout
+            android:id="@+id/tableLayout3"
+            android:layout_width="367dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TitGen">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel Tacho 1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTA1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel Tacho 2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTA2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel Tacho 3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTA3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel Tacho 4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTA4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel Tacho 5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTA5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel Tacho 6"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTA6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel Tacho 7"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTA7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Tacho 1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXT1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Tacho 2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXT2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Tacho 3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXT3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Tacho 4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXT4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Tacho 5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXT5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Tacho 6"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXT6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Brix Tacho 7"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/BRIXT7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Vacío Tacho 1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VACTA1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" mBar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Vacío Tacho 2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VACTA2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" mBar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Vacío Tacho 3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VACTA3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" mBar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Vacío Tacho 4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VACTA4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" mBar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Vacío Tacho 5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VACTA5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" mBar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Vacío Tacho 6"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VACTA6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" mBar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Vacío Tacho 7"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/VACTA7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" mBar"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@android:color/darker_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" Nivel TQ Aereo"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/NIVTQA"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:gravity="right"
+                        android:text="."
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/background_dark"
+                        android:text=" %"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </TableRow>
+        </TableLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="232dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_trans" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="163dp"
+        android:text="Presione el botón para conectar al servicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibMaster" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/verdenegro"
+        android:fadingEdge="horizontal|vertical"
+        android:fadingEdgeLength="5dp"
+        android:foregroundTint="@android:color/holo_green_light"
+        android:gravity="center_horizontal"
+        android:showDividers="beginning|middle|end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Server 1"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="329dp" />
+
+            <TextView
+                android:id="@+id/textST1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Desconectado"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <Switch
+                android:id="@+id/swS1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Server 2"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="329dp" />
+
+            <TextView
+                android:id="@+id/textST2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Desconectado"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <Switch
+                android:id="@+id/swS2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Server 3"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="329dp" />
+
+            <TextView
+                android:id="@+id/textST3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Desconectado"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <Switch
+                android:id="@+id/swS3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Server 4"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="329dp" />
+
+            <TextView
+                android:id="@+id/textST4"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Desconectado"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <Switch
+                android:id="@+id/swS4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal" />
+    </TableLayout>
+
+    <ImageButton
+        android:id="@+id/ibMaster"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:onClick="AccionMaster"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_button_off" />
+
+    <Button
+        android:id="@+id/buttonSalir"
+        style="@android:style/Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="Salir"
+        android:text="Salir"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="161dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ibMaster"
+        app:layout_constraintEnd_toEndOf="@+id/ibMaster"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/ibMaster"
+        app:layout_constraintTop_toTopOf="@+id/ibMaster"
+        app:layout_constraintVertical_bias="0.615" />
+
+
+</android.support.constraint.ConstraintLayout>
