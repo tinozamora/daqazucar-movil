@@ -182,6 +182,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					response = "IOException " + e.toString();
 				}
 			}
 		}
@@ -226,153 +227,159 @@ public class Client extends AsyncTask<Void, Void, Void> {
 	@Override
 	protected void onProgressUpdate(Void... values) {
 		//	textResponse.setText(Integer.toString(response.length()));
-
-		if (rechazo==0){
+		try	{
+			if (rechazo==0){
 
 //if (response.length()>1800) {
-			textLargo.setTextColor(Color.GREEN);
-			textLargo.setBackgroundColor(Color.BLACK);
-			textLargo.setText("Largo: " + Integer.toString(canBytes)+" "+motor[mx]);
-			mx++;
-			if(mx>3){
-				mx=0;
-			}
+				textLargo.setTextColor(Color.GREEN);
+				textLargo.setBackgroundColor(Color.BLACK);
+				textLargo.setText("Largo: " + Integer.toString(canBytes)+" "+motor[mx]);
+				mx++;
+				if(mx>3){
+					mx=0;
+				}
 
 //			}
 
 //		Nombres[0]=response.substring(1,35);
 
-			int x;
-			int y;
-			int offs;
-			String sc="";
+				int x;
+				int y;
+				int offs;
+				String sc="";
 
-			if (response.length()==4483) {
+				if (response.length()==4483) {
 
-				//if (response.substring(1, 1) == "*"){
-				//response = response.substring(1, 1121);
-				x = 3;
-				String n = "";
-//		if (response.length()>3 & response.substring(1,3)=="***"){
-				//for (int i = 0; i <= 31; i++) {
-
-				for (int i = 0; i <= 127; i++) {
-					if (x <= response.length() - 35) {
-						n = response.substring(x, x + 35).trim();
-						//n=n.substring(0,35);
-						funciones.Nombres[i] = n;
-						x = x + 35;
-					}
-
-				}
-
-				//}
-				nombresOK=true;
-				response="";
-			}else{
-				if (response.length()==1121) {
-					x = 1;
-					y=0;
-					offs=0;
+					//if (response.substring(1, 1) == "*"){
+					//response = response.substring(1, 1121);
+					x = 3;
 					String n = "";
-					sc=response.substring(0,1);
-					textLargo.setText("Largo: " + Integer.toString(canBytes)+ " " +sc);
+//		if (response.length()>3 & response.substring(1,3)=="***"){
+					//for (int i = 0; i <= 31; i++) {
 
-					switch (sc){
-						case "*":
-							x=1;
-							y=31;
-							offs=0;
-							break;
-						case "+":
-							x=1;
-							y=31;
-							offs=32;
-							break;
-						case "-":
-							x=1;
-							y=31;
-							offs=64;
-							break;
-						case "/":
-							x=1;
-							y=31;
-							offs=96;
-							break;
-						default:
-							offs=0;
-							break;
-					}
-					//offs=32;
-					for (int i = 0; i <= 31; i++) {
+					for (int i = 0; i <= 127; i++) {
 						if (x <= response.length() - 35) {
 							n = response.substring(x, x + 35).trim();
 							//n=n.substring(0,35);
-							funciones.Nombres[i+offs] = n;
+							funciones.Nombres[i] = n;
 							x = x + 35;
 						}
+
 					}
+
+					//}
+					nombresOK=true;
+					response="";
 				}else{
-					cierre=1;
+					if (response.length()==1121) {
+						x = 1;
+						y=0;
+						offs=0;
+						String n = "";
+						sc=response.substring(0,1);
+						textLargo.setText("Largo: " + Integer.toString(canBytes)+ " " +sc);
+
+						switch (sc){
+							case "*":
+								x=1;
+								y=31;
+								offs=0;
+								break;
+							case "+":
+								x=1;
+								y=31;
+								offs=32;
+								break;
+							case "-":
+								x=1;
+								y=31;
+								offs=64;
+								break;
+							case "/":
+								x=1;
+								y=31;
+								offs=96;
+								break;
+							default:
+								offs=0;
+								break;
+						}
+						//offs=32;
+						for (int i = 0; i <= 31; i++) {
+							if (x <= response.length() - 35) {
+								n = response.substring(x, x + 35).trim();
+								//n=n.substring(0,35);
+								funciones.Nombres[i+offs] = n;
+								x = x + 35;
+							}
+						}
+					}else{
+						cierre=1;
+					}
 				}
-			}
-			x=1;
-			String s;
-			String sn;
+				x=1;
+				String s;
+				String sn;
 
-			if ((response.length()==1667) || (response.length()==1706)){
-				for(int i = 0;i<=127;i++){
-					s = response.substring(x-1,x+12);
-					sn = s.substring(0,12);
-					funciones.Val[i]=  Double.parseDouble(sn);    //Float.parseFloat(sn);
-					x+=13;
+				if ((response.length()==1667) || (response.length()==1706)){
+					for(int i = 0;i<=127;i++){
+						s = response.substring(x-1,x+12);
+						sn = s.substring(0,12);
+						funciones.Val[i]=  Double.parseDouble(sn);    //Float.parseFloat(sn);
+						x+=13;
+					}
+					response="";
 				}
-				response="";
-			}
 
-			if ((response.length()==1923)){
-				for(int i = 0;i<=127;i++){
-					s = response.substring(x-1,x+14);
-					sn = s.substring(0,14);
-					funciones.Val[i]=  Double.parseDouble(sn);    //Float.parseFloat(sn);
-					x+=15;
+				if ((response.length()==1923)){
+					for(int i = 0;i<=127;i++){
+						s = response.substring(x-1,x+14);
+						sn = s.substring(0,14);
+						funciones.Val[i]=  Double.parseDouble(sn);    //Float.parseFloat(sn);
+						x+=15;
+					}
+					response="";
 				}
-				response="";
-			}
 
-			String cadena="";
-			DecimalFormat formatter = new DecimalFormat("###,###,##0.00");
-			DecimalFormat enteros = new DecimalFormat("000");
+				String cadena="";
+				DecimalFormat formatter = new DecimalFormat("###,###,##0.00");
+				DecimalFormat enteros = new DecimalFormat("000");
 
-			for(int i =0;i<=127;i++){
-				String Valor = formatter.format(funciones.Val[i]);
-				String corr = enteros.format(i+1);
-				cadena+=corr + ". "+funciones.Nombres[i] + "=\t"+ Valor+ "\r\n";
-			}
-
-			textResponse.setTextColor(Color.parseColor("#ff99cc00"));
-			textResponse.setText(cadena);
-
-			//	textResponse.setText(response);
-			//response="";
-
-		}else{
-			//textResponse.setText(response);
-			if (response.length()>0) {
-				textLargo.setBackgroundColor(Color.BLACK);
-				textLargo.setTextColor(Color.RED);
-				textLargo.setText("Rechazo: " + Integer.toString(canBytes));
-				if (chkErr.isChecked()){
-					textResponse.setTextColor(Color.RED);
-					textResponse.setText(response);
+				for(int i =0;i<=127;i++){
+					String Valor = formatter.format(funciones.Val[i]);
+					String corr = enteros.format(i+1);
+					cadena+=corr + ". "+funciones.Nombres[i] + "=\t"+ Valor+ "\r\n";
 				}
-				//textResponse.setTextColor(Color.RED);
+
+				textResponse.setTextColor(Color.parseColor("#ff99cc00"));
+				textResponse.setText(cadena);
+
+				//	textResponse.setText(response);
+				//response="";
+
+			}else{
 				//textResponse.setText(response);
+				if (response.length()>0) {
+					textLargo.setBackgroundColor(Color.BLACK);
+					textLargo.setTextColor(Color.RED);
+					textLargo.setText("Rechazo: " + Integer.toString(canBytes));
+					if (chkErr.isChecked()){
+						textResponse.setTextColor(Color.RED);
+						textResponse.setText(response);
+					}
+					//textResponse.setTextColor(Color.RED);
+					//textResponse.setText(response);
 
-				//response = "";
+					//response = "";
+				}
 			}
+			super.onProgressUpdate(values);
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		super.onProgressUpdate(values);
+
+
 
 	}
 }
