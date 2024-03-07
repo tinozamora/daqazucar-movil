@@ -491,7 +491,7 @@ public class Client1 extends AsyncTask<Void, Void, Void> {
         if(mx>3){
             mx=0;
         }
-
+//    try{
         //S1---------------------------------------------------------------------------------------
 
         funciones.statusS1="Bytes Rx " +  Integer.toString(canBytes1)+" "+motor[mx] ;
@@ -575,7 +575,15 @@ public class Client1 extends AsyncTask<Void, Void, Void> {
             String s;
             String sn,cl,clv;
 
-            if (((response1.length()==1667) || (response1.length()==1706)) && response1.substring(0,1)!="*"){
+            //if (((response1.length()==1667) || (response1.length()==1706)) && response1.substring(0,1)!="*"){
+            String terx1;
+            if (response1.length()>3){
+                terx1=response1.substring(response1.length()-3);
+            }else{
+                terx1="-----";
+            };
+
+            if (((response1.length()==1667) || (response1.length()==1706)) && terx1.equals("fin")){
                 funciones.isDatoOkS1=true;
                 for(int i = 0;i<=127;i++){
                     s = response1.substring(x-1,x+12);
@@ -712,7 +720,15 @@ public class Client1 extends AsyncTask<Void, Void, Void> {
             String s2;
             String sn2,cl2,clv2;
 
-            if (((response2.length()==1667) || (response2.length()==1706)) && response2.substring(0,1)!="*"){
+            //if (((response2.length()==1667) || (response2.length()==1706)) && response2.substring(0,1)!="*"){
+            String terx2;
+            if (response2.length()>3){
+                terx2=response2.substring(response2.length()-3);
+            }else{
+                terx2="-----";
+            };
+
+            if (((response2.length()==1667) || (response2.length()==1706)) && terx2.equals("fin")){
                 funciones.isDatoOkS2=true;
                 for(int i = 0;i<=127;i++){
                     s2 = response2.substring(x2-1,x2+12);
@@ -836,7 +852,15 @@ public class Client1 extends AsyncTask<Void, Void, Void> {
             String s3;
             String sn3,cl3,clv3;
 
-            if (((response3.length()==1667) || (response3.length()==1706)) && response3.substring(0,1)!="*"){
+            //if (((response3.length()==1667) || (response3.length()==1706)) && response3.substring(0,1)!="*"){
+            String terx3;
+            if (response3.length()>3){
+                terx3=response3.substring(response3.length()-3);
+            }else{
+                terx3="-----";
+            };
+
+            if (((response3.length()==1667) || (response3.length()==1706)) && terx3.equals("fin")){
                 funciones.isDatoOkS3=true;
                 for(int i = 0;i<=127;i++){
                     s3 = response3.substring(x3-1,x3+12);
@@ -961,7 +985,15 @@ public class Client1 extends AsyncTask<Void, Void, Void> {
             String s4;
             String sn4,cl4,clv4;
 
-            if (((response4.length()==1667) || (response4.length()==1706)) && response4.substring(0,1)!="*"){
+            //if (((response4.length()==1667) || (response4.length()==1706)) && response4.substring(0,1)!="*"){
+            String terx4;
+            if (response4.length()>3){
+                terx4=response4.substring(response4.length()-3);
+            }else{
+                terx4="-----";
+            };
+
+            if (((response4.length()==1667) || (response4.length()==1706)) && terx4.equals("fin")){
                 funciones.isDatoOkS4=true;
                 for(int i = 0;i<=127;i++){
                     s4 = response4.substring(x4-1,x4+12);
@@ -1006,7 +1038,9 @@ public class Client1 extends AsyncTask<Void, Void, Void> {
         }
         //finS4---------------------------------------------------------------------------------------
 
-        super.onProgressUpdate(values);
-
+//        super.onProgressUpdate(values);
+//    } catch (Exception e) {
+//        e.printStackTrace();
+//    }
     }
 }

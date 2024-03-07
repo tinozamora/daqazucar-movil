@@ -49,7 +49,8 @@ public class funciones  {
 //     String[] SIP =  ctx2.getResources().getStringArray(R.array.servers);
 //     String[] PIP = ctx2.getResources().getStringArray(R.array.puertos);
 
-    public static String[] ServerIP =  {"190.86.180.200","190.86.180.200","190.86.180.200","190.86.180.200"};
+    //public static String[] ServerIP =  {"190.86.180.200","190.86.180.200","190.86.180.200","190.86.180.200"};
+    public static String[] ServerIP =  {"10.1.1.200","10.1.1.200","10.1.1.200","10.1.1.200"};
     public static String[] PortIP = {"701","702","704","710"};
 
 
